@@ -25,6 +25,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+        .when('/items/:id', {
+        templateUrl: 'views/items.html',
+        controller: 'ItemsCtrl',
+        controllerAs: 'items'
+      })
       .otherwise({
         redirectTo: '/'
       });
