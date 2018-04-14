@@ -16,15 +16,20 @@ angular.module('bobbyApp')
     ];
     console.log("here2");
 
-    /*var loadBookings = function(){
+
+      var loadItemTypes = function(){
             $scope.loading = true;
-          serviceAjax.path("bookings").then(function(data){
-                console.log("Poulet 2",data.data.data);
+          serviceAjax.path("itemtypes").then(function(data){
+                console.log("Poulet",data.data);
+
+                $scope.types=data.data;
 
 
             });
         };
 
 
-        loadBookings();*/
+        loadItemTypes();
   });
+
+

@@ -8,12 +8,17 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
   </head>
   <body ng-app="bobbyApp" ng-controller="indexCtrl">
     <!--[if lte IE 8]>
@@ -22,41 +27,100 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+      <nav   class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
 
-            <a class="navbar-brand" href="#/">documents</a>
+    <!-- Début fonction image -->
+    <a class="navbar-brand" href="https://assos.utc.fr">
+      <img src="images/bde.png" width="45" height="30" class="d-inline-block align-top" alt="">
+      </a>
+    <!-- fin fonction image -->
+
+          <!-- Début fonction accueil -->
+            <li class="nav-item active">
+                   <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+          <!-- fin fonction acceuil -->
+
+          <!-- boutons deroulants -->
+
+          <!-- bouton deroulant 1 -->
+            <div class="dropdown">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catégories
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div ng-repeat="type in types">
+                        <a class="dropdown-item" href="#">{{type.name}}</a>
+                    </div>
+                  </div>
+              </li>
+            </div>
+
+          <!-- bouton deroulant 2 -->
+          <div class="dropdown">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mon matériel
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Asso1</a>
+                    <a class="dropdown-item" href="#">Assos2</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+              </li>
+            </div>
+
+          <!-- bouton deroulant 3 -->
+            <div class="dropdown">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mes reservations
+                </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Asso1</a>
+                    <a class="dropdown-item" href="#">Assos2</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+              </Li>
+            </div>
+
+          <!-- bouton deroulant 4 -->
+          <div class="dropdown">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ajout matériel
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Asso1</a>
+                    <a class="dropdown-item" href="#">Assos2</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
           </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+      
+          <!-- fin boutons déroulants -->
         </div>
-      </div>
-    </div>
+      </ul>
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
+    <!-- Début fonction recherche-->
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    <!-- Fin fonction recherche -->
+  </nav>
+
+</div>
+
+<!-- fin fonction barre de naviagation -->  
+
+
+    
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -91,5 +155,10 @@
         <script src="scripts/controllers/index.js"></script>
         <script src="scripts/services/serviceAjax.js"></script>
         <!-- endbuild -->
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
