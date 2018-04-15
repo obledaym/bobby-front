@@ -26,6 +26,9 @@ angular.module('bobbyApp')
 
 
         loadAssociations();
+        $scope.showItems = function(id) {
+          $location.path('#/items/' + id);
+        };
     /*var loadBookings = function(){
             $scope.loading = true;
           serviceAjax.path("bookings").then(function(data){

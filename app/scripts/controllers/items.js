@@ -20,7 +20,7 @@ angular.module('bobbyApp')
 
             $scope.loading = true;
           serviceAjax.path("associations").then(function(data){
-                console.log("Poulet",data.data);
+                console.log("Poulet3",data.data);
 
 
             });
@@ -28,6 +28,7 @@ angular.module('bobbyApp')
 
 
         loadAssociations();
+
     /*var loadBookings = function(){
             $scope.loading = true;
           serviceAjax.path("bookings").then(function(data){
