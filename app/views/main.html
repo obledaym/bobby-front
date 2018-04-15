@@ -6,108 +6,14 @@
 <!-- ligne  2 -->
   <div class="row">
 
-    <div class="col-md-4" align="center" ng-click="showItems(1)">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/mobilint.jpg" height="250" width="250">
-        <div class="card-body" >
-            <h5 class="card-title" align="center" >Mobilier Intérieur</h5>
+      <div class="col-md-4" align="center" ng-click="showItems(1)" ng-repeat="type in types" style="margin-bottom: 40px">
+        <a href="#" div class="card" style="width: 18rem;">
+          <img class="card-img-top" align="center" src={{type.picture}} height="250" width="250">
+          <div class="card-body" >
+            <h5 class="card-title" align="center" >{{type.name}}</h5>
             <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-4" align="center" ng-click="showItems(2)">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/barnum.jpg" height="250" width="250"  >
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" >Mobilier Extérieur</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-4" align="center" ng-click="showItems(3)">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/securite.jpg" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" >Sécurité</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ligne  3 vide -->
-  <br>
-
-  <!-- ligne  4  -->
-  <div class="row">
-
-    <div class="col-md-4" align="center">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/outils.jpg" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" > Outils</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-4" align="center">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/cuisine.png" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" > Cuisine</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-4" align="center">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/deco.jpg" width="100" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" > Déco</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ligne  5 vide -->
-  <br>
-
-  <!-- ligne  6 -->
-  <div class="row">
-
-    <div class="col-md-4" align="center">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/jeux.jpg" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" > Jeux</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-4" align="center">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src="../images/hightech.jpg" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" > High Tech</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-4" align="center">
-      <a href="#" div class="card" style="width: 18rem;">
-          <img class="card-img-top" align="center" src=".jpg" height="250" width="250">
-        <div class="card-body" href="#">
-            <h5 class="card-title" align="center" > Divers</h5>
-            <p class="card-text">petite phrase</p>
-        </div>
-      </a>
-    </div>
+          </div>
+        </a>
+      </div>      
   </div>
 </div>
