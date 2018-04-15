@@ -8,7 +8,7 @@
  * Controller of the bobbyApp
  */
 angular.module('bobbyApp')
-  .controller('ItemsCtrl', function ($scope, serviceAjax, $routeParams) {
+  .controller('ItemsCtrl', function ($scope, serviceAjax, $routeParams, $location) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -28,7 +28,6 @@ angular.module('bobbyApp')
 
 
         loadAssociations();
-
     /*var loadBookings = function(){
             $scope.loading = true;
           serviceAjax.path("bookings").then(function(data){

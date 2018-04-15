@@ -4,21 +4,23 @@
  * @ngdoc function
  * @name bobbyApp.controller:MainCtrl
  * @description
- * # MainCtrl
+ * # ItemAddCtrl
  * Controller of the bobbyApp
  */
 angular.module('bobbyApp')
-  .controller('MainCtrl', function ($scope, serviceAjax, $window) {
+  .controller('ValidatedBookingCtrl', function ($scope, serviceAjax, $routeParams) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    console.log("here");
+    var id = $routeParams.asso_id;
+     console.log(id);
     var loadAssociations = function(){
+
             $scope.loading = true;
           serviceAjax.path("associations").then(function(data){
-                console.log("Poulet",data.data);
+                console.log("Poulet3",data.data);
 
 
             });
