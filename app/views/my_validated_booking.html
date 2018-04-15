@@ -1,0 +1,67 @@
+<div class="container">
+  <h2 align="center"> Mes demandes de réservation </h2>
+
+<table align="center" class="table" >
+
+    <th align="center" nav-pills>
+
+
+            <ul class="nav flex-column">
+              <br>
+               <br>
+
+             <span class="border border-success">
+                <li class="nav-item bg-success text-white">
+                <a class="nav-link " href="#!/my_validated_booking/1">Validée</a>
+              </li>
+            </span>
+             <br>
+            <span class="border border-warning ">
+              <li class="nav-item">
+                <a class="nav-link active " href="#!/my_waiting_booking/1">En cours</a>
+              </li>
+            </span>
+            <br>
+            <span class="border border-danger">
+              <li class="nav-item" >
+                <a class="nav-link active" href="#!/my_refused_booking/1">Refusé</a>
+              </li>
+            </span>
+            </ul>
+    </th>
+
+    <th>
+
+
+              <table class="table">
+              <thead class="thead-dark">
+              <tr>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Quantité</th>
+                  <th scope="col">Date de début</th>
+                  <th scope="col">Date de fin</th>
+                  <th scope="col">Association propriétaire</th>
+                  <th aligne=center scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody>
+
+                 <tr>
+                  <th scope="row">barnum</th>
+                  <td>3*3</td>
+                  <td>10</td>
+                  <td>15/02</td>
+                  <td>20/02</td>
+                  <td aligne="center">BDE</td>
+                  <td align="center"><button type="button" class="btn btn-outline-danger" ng-if="2==1">Annuler la réservation</button>
+                  <button type="button" class="btn btn-outline-info" ng-if="2==2">Rendu</button></td>
+
+                </tr>
+
+              </tbody>
+            </table>
+
+      </th>
+    </table>
+</div>
