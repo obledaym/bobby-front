@@ -48,6 +48,21 @@ angular
         controller: 'RefusedBookingCtrl',
         controllerAs: 'refusedBooking'
       })
+        .when('/my_validated_booking/:asso_id', {
+        templateUrl: 'views/my_validated_booking.html',
+        controller: 'MyValidatedBookingCtrl',
+        controllerAs: 'MyValidatedBooking'
+      })
+        .when('/my_waiting_booking/:asso_id', {
+        templateUrl: 'views/my_waiting_booking.html',
+        controller: 'MyWaitingBookingCtrl',
+        controllerAs: 'MyWaitingBooking'
+      })
+        .when('/my_refused_booking/:asso_id', {
+        templateUrl: 'views/my_refused_booking.html',
+        controller: 'MyRefusedBookingCtrl',
+        controllerAs: 'MyRefusedBooking'
+      })
       .otherwise({
         redirectTo: '/'
       });
