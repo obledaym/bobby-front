@@ -1,11 +1,15 @@
- <style type="text/css"> 
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
 
-
- 
- #navbarre { position:fixed;
-
-
+body {
+  padding: 0;
+  background-color:#414361;
 }
 
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJDQUFDOzs7O2FBSVksZUFBZTs7O0NBRzNCIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIDxzdHlsZSB0eXBlPVwidGV4dC9jc3NcIj4gXHJcblxyXG5cclxuIFxyXG4gI25hdmJhcnJlIHsgcG9zaXRpb246Zml4ZWQ7XHJcblxyXG5cclxufVxyXG5cclxuIl19 */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osaUJBQWlCO0NBQ2xCOztBQUVEO0VBQ0UsV0FBVztFQUNYLHlCQUF5QjtDQUMxQiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5icm93c2VoYXBweSB7XHJcbiAgbWFyZ2luOiAwLjJlbSAwO1xyXG4gIGJhY2tncm91bmQ6ICNjY2M7XHJcbiAgY29sb3I6ICMwMDA7XHJcbiAgcGFkZGluZzogMC4yZW0gMDtcclxufVxyXG5cclxuYm9keSB7XHJcbiAgcGFkZGluZzogMDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiM0MTQzNjE7XHJcbn1cclxuXHJcblxyXG4iXX0= */
