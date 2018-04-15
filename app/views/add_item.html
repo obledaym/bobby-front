@@ -1,0 +1,84 @@
+<div class="container">
+  <h2 align="center">
+  Ajout de matériel
+</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form ng-submit="addNew()">
+                            <table class="table table-striped table-bordered">
+                                <thead class="thead-dark" align="center">
+                                    <tr>
+
+                                        <th>Nom</th>
+                                        <th>Description</th>
+                                        <th>Quantité</th>
+                                        <th width=150>Lieu de stockage</th>
+                                        <th width=120>Statut (*)</th>
+                                        <th>Montant caution par unité</th>
+                                        <th width=210>Catégorie</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr >
+
+                                        <td valign="middle">
+                                            <input type="text" class="form-control" ng-model="" required/></td>
+                                        <td>
+                                            <input type="text" align="justify"  class="form-control" ng-model="" required/></td>
+                                        <td>
+                                            <input type="number" min="0" max="500" step="1" value="0" class="form-control" ng-model="" required/></td>
+                                        <td>
+                                            <div class="form-group">
+                                             <select class="form-control" id="lieu_stockage">
+                                              <option>Salle PVDC</option>
+                                              <option>Garage n°4</option>
+                                              <option>etc...</option>
+                                            </select>
+                                          </div></td>
+                                        <td>
+                                            <div class="form-group">
+                                             <select class="form-control" id="status">
+                                              <option>Public</option>
+                                              <option>Privé</option>
+                                              </select>
+                                          </div></td>
+                                        <td>
+                                            <input type="number" step="1" value="0" class="form-control" " required/></td>
+
+                                         <td>
+                                            <div class="form-group">
+                                             <select class="form-control" id="sel1">
+                                              <option>Mobilier extérieur</option>
+                                              <option>Mobilier Intérieur</option>
+                                              <option>etc...</option>
+                                            </select>
+                                          </div></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-secondary addnew pull-right" value="+">
+                                </div>
+
+                            * statut public : le matériel sera visible par les autres associations et pourra être emprunté
+                            <br>
+                            * statut privé : le matériel n'est visible que pour les membres de l'association et ne pourra pas être emprunté par une autre association
+                            <br>
+                            <br>
+
+                            <div class="form-group">
+                                <input type="button" class="btn btn-outline-info pull-right" value="Enregistrer la saisie">
+
+
+<!--PROBLEME : il faut un bouton qui crée dynamiquement une ligne supplémentaire dans le tableau de la page HTML pour saisir un nouveau tuple pour un matériel à ajouter (d'où le bouton "+") et il faut un bouton "valider l'ajout" qui envoie tous les tuples au traitement (1 ligne du tableau sur la page HTML = 1 tuple dans la BDD) en sachant que l'on sait le nombre de tuples à enregistrer si l'on compte le nombre de fois où l'utilisateur clique sur le "+"-->
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
