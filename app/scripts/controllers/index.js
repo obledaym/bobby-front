@@ -26,10 +26,12 @@ angular.module('bobbyApp')
 
 
             });
+          serviceAjax.path("associations").then(function(data){
+                console.log("blbl", data.data);
+                $scope.assos = data.data;
+          });
         };
 
 
         loadItemTypes();
   });
-
-

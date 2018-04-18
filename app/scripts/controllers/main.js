@@ -18,7 +18,7 @@ angular.module('bobbyApp')
     var loadAssociations = function(){
             $scope.loading = true;
           serviceAjax.path("associations").then(function(data){
-                console.log("Poulet",data.data);
+                console.log("bjr",data.data);
 
 
             });

@@ -21,7 +21,7 @@ angular.module('bobbyApp')
             $scope.loading = true;
           serviceAjax.path("associations").then(function(data){
                 console.log("Poulet3",data.data);
-
+                $scope.asso = data.data;
 
             });
         };

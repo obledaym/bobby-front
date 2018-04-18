@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
 
@@ -48,12 +48,12 @@
           <!-- bouton deroulant 1 -->
             <div class="dropdown">
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Catégories
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <div ng-repeat="type in types">
-                        <a class="dropdown-item" href="#">{{type.name}}</a>
+                        <a class="dropdown-item" href="#!/items/{{type.id}}">{{type.name}}</a>
                     </div>
                   </div>
               </li>
@@ -62,13 +62,13 @@
           <!-- bouton deroulant 2 -->
           <div class="dropdown">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mon matériel
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Asso1</a>
-                    <a class="dropdown-item" href="#">Assos2</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div ng-repeat="asso in assos">
+                        <a class="dropdown-item" href="#!/waiting_booking/{{asso.id}}">{{asso.name}}</a>
+                    </div>
                   </div>
               </li>
             </div>
@@ -76,14 +76,14 @@
           <!-- bouton deroulant 3 -->
             <div class="dropdown">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mes reservations
                 </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Asso1</a>
-                    <a class="dropdown-item" href="#">Assos2</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <div ng-repeat="asso in assos">
+                        <a class="dropdown-item" href="#!/my_validated_booking/{{asso.id}}">{{asso.name}}</a>
                   </div>
+                </div>
               </Li>
             </div>
 
@@ -100,7 +100,7 @@
                 </div>
               </li>
           </div>
-      
+
           <!-- fin boutons déroulants -->
         </div>
       </ul>
@@ -116,10 +116,10 @@
 
 </div>
 
-<!-- fin fonction barre de naviagation -->  
+<!-- fin fonction barre de naviagation -->
 <div ng-view=""></div>
 
-    
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

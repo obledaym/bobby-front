@@ -2,14 +2,12 @@
 <!-- ligne  1 vide -->
 <br>
 
-
-<!-- ligne  2 -->
-  <div class="row">
-
-        <a href="#" div class="card" style="width: 18rem;">
-            <p class="card-text">petite phrase</p>
-          </div>
-        </a>
-      </div>      
+  <div class="col-md-4" align="center" ng-click="showItems(1)" ng-repeat="type in types" style="margin-bottom: 40px">
+    <a href="#" div class="card" style="width: 18rem;">
+      <img class="card-img-top" align="center" src={{type.picture}} height="250" width="250">
+      <div class="card-body" >
+        <h5 class="card-title" align="center" >{{type.name}}</h5>
+      </div>
+    </a>
   </div>
-</div>
+</div>  
